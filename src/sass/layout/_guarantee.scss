@@ -1,0 +1,58 @@
+.guarantee {
+
+    &__inner {
+        background-color: var(--secondary-bg-color);
+    }
+
+    &__list {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__item {
+        position: relative;
+        padding-bottom: 24px;
+        padding-left: 28px;
+
+        font-weight: 500;
+        color: var(--secondary-text-color);
+    }
+    
+    &__item:not(:last-child) {
+        border-left: 1px dashed var(--accent);
+    }
+
+    &__item::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-50%);
+        content: '';
+        display: block;
+        width: 14.37px;
+        height: 20px;
+        background-image: url(/images/css/fire-img.png);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .guarantee {
+
+        &__inner {
+            background-color: var(--primary-color);
+        }
+
+        &__list {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
+        &__item {
+            padding-bottom: 24px;
+            padding-left: 28px;
+
+            font-weight: 500;
+            color: var(--secondary-text-color);
+        }
+    }
+}
