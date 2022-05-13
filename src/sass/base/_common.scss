@@ -1,12 +1,12 @@
 body {
-    margin: 0;
+  margin: 0;
 
-    background-color: var(--primary-color);
-    color: var(--third-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.08em;
+  background-color: var(--primary-color);
+  color: var(--third-color);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.08em;
 }
 
 h1,
@@ -16,30 +16,30 @@ h4,
 h5,
 h6,
 p {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ol,
 ul {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  // width: 100%;
+  height: auto;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .accent {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 // Weight 800, 500 700, 600
