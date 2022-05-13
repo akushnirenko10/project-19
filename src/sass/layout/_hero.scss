@@ -34,7 +34,7 @@
 }
 
 .hero__section--button {
-  padding: 14px 70px;
+  padding: 16px 55px;
   background: #ff6b09;
   border: 0;
   font-family: 'Montserrat', sans-serif;
@@ -47,17 +47,7 @@
   color: #ffffff;
 }
 
-.hero__foto {
-  margin-top: 20px;
-  padding-top: 20px;
-  position: relative;
-}
-
 @media screen and (min-width: 768px) {
-  .container {
-    padding: 80px 32px 44px 42px;
-  }
-
   .hero__section--discription--header {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -66,6 +56,15 @@
     line-height: 34px;
     letter-spacing: 0.03em;
     color: #111518;
+    margin-bottom: 8px;
+  }
+
+  .hero__section--discription--paragraph {
+    margin-bottom: 48px;
+  }
+
+  .hero__section--button {
+    padding: 16px 46px;
   }
 
   .paragraph {
@@ -77,6 +76,8 @@
     margin-top: 20px;
     padding-top: 20px;
     position: relative;
+    width: 376px;
+    height: 322px;
   }
 
   .hero__foto-2 {
@@ -84,13 +85,15 @@
     left: 36px;
     position: absolute;
   }
+
+  .hero__section--beackraund {
+    display: flex;
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (min-width: 1680px) {
-  .container {
-    padding: 40px 16px 46px 16px;
-  }
-
   .hero__section--discription--header {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -101,10 +104,16 @@
     color: #111518;
   }
 
+  .hero__section--button {
+    padding: 28px 93px;
+  }
+
   .hero__foto {
     margin-top: 20px;
     padding-top: 20px;
     position: relative;
+    width: 842px;
+    height: 718px;
   }
 
   .hero__foto-2 {
@@ -116,7 +125,20 @@
 
 @media screen and (max-width: 767px) {
   .container {
-    padding: 40px 20px 47px 20px;
+    width: 320px;
+  }
+
+  .hero__section--discription {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .hero__section--discription--header {
+    margin-bottom: 8px;
+  }
+
+  .hero__section--discription--paragraph {
+    margin-bottom: 40px;
   }
 
   .hero__section--discription--header {
@@ -130,9 +152,11 @@
   }
 
   .hero__foto {
-    margin-top: 20px;
+    margin: 20px auto 46px;
     padding-top: 20px;
     position: relative;
+    width: 224px;
+    height: 192px;
   }
 
   .hero__foto-2 {
@@ -140,4 +164,9 @@
     left: 20px;
     position: absolute;
   }
+
+  // .hero__section {
+  //   background: url(/images/beackraund-hero.png);
+  //   background-color: #f1f1f1;
+  // }
 }
