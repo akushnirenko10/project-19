@@ -72,14 +72,10 @@
     line-height: 33px;
   }
 
-  .hero__foto {
-    margin-top: 40px;
-  }
-
   .hero__section--beackraund {
     display: flex;
     margin-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 123px;
   }
 
   .hero__section--beackraund {
@@ -110,18 +106,13 @@
     padding: 28px 93px;
   }
 
-  .hero__foto {
-    margin-top: 40px;
-    width: 842px;
-    height: 718px;
-  }
-
   .hero__section--beackraund {
     position: relative;
+    padding-bottom: 138px;
   }
 
   .beackraund-hero {
-    top: -112px;
+    top: -186px;
     left: 0;
     position: absolute;
     z-index: -1;
@@ -159,16 +150,15 @@
 
   .hero__foto {
     margin: 40px auto 46px;
-    width: 224px;
-    height: 192px;
   }
 
   .hero__section--beackraund {
     position: relative;
+    padding-bottom: 56px;
   }
 
   .beackraund-hero {
-    top: -100px;
+    top: 46px;
     left: 0;
     position: absolute;
     z-index: -1;
