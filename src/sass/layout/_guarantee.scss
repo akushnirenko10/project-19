@@ -51,6 +51,7 @@
         }
 
         &__inner {
+            margin-left: 0;
             background-color: var(--secondary-bg-color);
             padding-left: 87px;
             padding-right: 58px;
@@ -62,8 +63,11 @@
         }
 
         &__item {
-            padding-bottom: 20px;
             padding-left: 24px;
+        }
+
+        &__item:not(:last-child) {
+            padding-bottom: 20px;
         }
 
         &__item::before {
