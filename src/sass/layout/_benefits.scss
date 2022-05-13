@@ -14,46 +14,127 @@ font-size: 20px;
 line-height: 136%;
 letter-spacing: 0.03em;
 color: #FFFFFF;
+margin-bottom: 30px;
 }
 .benefits__container{
     display: flex;
+    background-color: white;
     max-width: 440px;
     padding: 20px 24px 20px 20px;
+    margin: auto;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    z-index: 3;
 
 }
 .benefits__list{
     counter-reset: benefits__list;
 }
 .benefits__item::before{
-content: counter(benefits__list);
+content: counter(benefits__list) ;
 counter-increment: benefits__list;
 color: var(--accent);
+font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+}
+.benefits__text{
+font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    color: var(--third-color);
 }
 
+// FOR TABLET -----------------------------
 
 @media screen and (min-width: 768px) {
+    .benefits__title {
+     text-align: center;
+        }
+    br{           
+    display: none;
+                }
     .benefits__container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -32px;
-            margin-top: -44px;
-            padding: 0;
-            list-style: none;
-
+    
+     min-width: 688px;
+    padding: 40px 112px 40px 92px;
     }
-        .benefits__list{
-        margin-left: 32px;
-        margin-top: 44px;
-        flex-basis: calc(100% - 64px) / 2;
+    .benefits__list{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+
+       margin-top: - 40px;
+    //    margin-left: -70px;
+   
+   padding: 0;
+    }
+    .benefits__item {
+    display: block;
+    margin-left: 70px;
+    margin-top: 40px;
+    // margin-bottom: 44px;
+    max-width:calc(100% - 64px) / 2;
+    }
+.benefits__list:nth-child(n + 2){
+    margin-bottom: 0;
+}
+.benefits__list:nth-child(odd){
+    min-width: 236px;
+}
+.benefits__list:nth-child(even){
+    min-width: 216px;
+}
+p.benefits__text{
+   flex-direction: column;
+}
+     
+}
+
+// FOR DESKTOP-----------------------------
+
+
+@media screen and (min-width: 1680px) {
+    .benefits{
+        min-width: 1680px;
+    }
+    
+    .benefits__container {
+        min-width: 1648px;
+        padding: 60px 32px 60px 140px;
+    }
+    .benefits__title {
+            visibility: hidden;
         }
 
-       .benefits__container {
-                    display: flex;
-                    min-width: 688px;
-                    padding: 40px 112px 40px 92px;
-        
-                }
-}
-@media screen and (min-width: 1200px) {
+   
+        .benefits__list {
+            margin-left: -140px;
+            margin-top: -60px;
+        }
 
+    .benefits__text {
+            font-size: 20px;
+            line-height: 1.4;
+        }        
+    .benefits__item::before {
+        font-size: 20px;
+        line-height: 33px;
+}
+.benefits__item {
+    flex-wrap: wrap;
+    flex-basis: calc(100% - 612px) / 3;
+}
+  .benefits__item {
+      display: block;
+      margin-left: 70px;
+      margin-top: 40px;
+      // margin-bottom: 44px;
+      max-width: calc(100% - 96px) / 3;
+  }
 }
