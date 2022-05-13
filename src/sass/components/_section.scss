@@ -12,10 +12,12 @@
 
     &__title--theme-light {
         background-color: var(--primary-color);
+        color: var(--third-color);
     }
 
     &__title--theme-dark {
         background-color: var(--third-color);
+        color: var(--primary-color);
     }
 }
 
