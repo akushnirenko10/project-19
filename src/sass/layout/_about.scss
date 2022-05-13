@@ -29,8 +29,6 @@
   line-height: 1.22;
   letter-spacing: 0.06em;
   color: #111518;
-
-  list-style-position: inside;
 }
 
 .about__description:not(:last-child) {
@@ -68,6 +66,7 @@
   line-height: 1.66;
   color: #b9b9b9;
 
+  text-align: left;
   margin-bottom: 8px;
 }
 
