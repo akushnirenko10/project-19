@@ -1,61 +1,56 @@
-.hero__section--discription--header {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 130%;
-  letter-spacing: 0.03em;
-  color: #111518;
-}
-
 .paragraph {
-  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 22px;
   display: flex;
   align-items: center;
   letter-spacing: 0.08em;
-}
 
-.paragraph-color-1 {
-  font-weight: 500;
-  color: #b9b9b9;
-}
+  &--color-silver {
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
 
-.paragraph-color-2 {
-  font-weight: 700;
-  color: #111518;
-}
+  &--color-black {
+    font-weight: 700;
+    color: var(--third-color);
+  }
 
-.paragraph-color-3 {
-  font-weight: 700;
-  color: #ff6b09;
+  &--color-orandge {
+    font-weight: 700;
+    color: var(--accent);
+  }
 }
 
 .hero__section--button {
-  padding: 16px 55px;
-  background: #ff6b09;
-  border: 0;
-  font-family: 'Montserrat', sans-serif;
+  padding: 16px 50px;
+  background: var(--accent);
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
-}
+  color: var(--primary-color);
+  border: 1px solid #ff6b09;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: var(--accent);
+    border: 1px solid #ff6b09;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero__section--discription--header {
-    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
     line-height: 34px;
     letter-spacing: 0.03em;
-    color: #111518;
+    color: var(--third-color);
     margin-bottom: 8px;
   }
 
@@ -75,15 +70,12 @@
   .hero__section--beackraund {
     display: flex;
     margin-top: 80px;
-    padding-bottom: 123px;
-  }
-
-  .hero__section--beackraund {
+    padding-bottom: 88px;
     position: relative;
   }
 
   .beackraund-hero {
-    top: -139px;
+    top: -221px;
     left: 0;
     position: absolute;
     z-index: -1;
@@ -93,13 +85,12 @@
 
 @media screen and (min-width: 1680px) {
   .hero__section--discription--header {
-    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: 58px;
     line-height: 75px;
     letter-spacing: 0.03em;
-    color: #111518;
+    color: var(--third-color);
   }
 
   .hero__section--button {
@@ -108,11 +99,10 @@
 
   .hero__section--beackraund {
     position: relative;
-    padding-bottom: 138px;
   }
 
   .beackraund-hero {
-    top: -186px;
+    top: -207px;
     left: 0;
     position: absolute;
     z-index: -1;
@@ -130,22 +120,18 @@
     margin-bottom: 40px;
   }
 
-  .hero__section--discription--header {
-    margin-bottom: 8px;
-  }
-
   .hero__section--discription--paragraph {
     margin-bottom: 40px;
   }
 
   .hero__section--discription--header {
-    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: 0.03em;
-    color: #111518;
+    color: var(--third-color);
   }
 
   .hero__foto {
@@ -158,7 +144,7 @@
   }
 
   .beackraund-hero {
-    top: 46px;
+    top: -31px;
     left: 0;
     position: absolute;
     z-index: -1;
