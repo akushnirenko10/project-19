@@ -1,17 +1,17 @@
 .how-we-do {
-  
+
   &__header {
 
     @media screen and (max-width: 767.98px) {
 
       margin-bottom: 32px;
     }
-    
+
     @media screen and (min-width: 768px) {
 
       line-height: 1.31;
     }
-    
+
     @media screen and (min-width: 1680px) {
 
       text-align: left;
@@ -29,9 +29,9 @@
 }
 
 .how-we-do__item {
-  padding-top: 32px;
+  padding: 32px 20px 20px;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-  text-align: center; 
+  text-align: center;
   height: 280px;
   width: 100%;
   transition-property: background-color, color;
@@ -43,7 +43,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    
+
     padding-top: 40px;
     height: 336px;
     width: 336px;
@@ -90,17 +90,19 @@
   }
 
   @media screen and (min-width: 768px) {
-    
     margin-bottom: 32px;
   }
 }
 
 .how-we-do__title {
   position: relative;
+  min-height: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.08em;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,9 +113,18 @@
     height: 2px;
     background-color: var(--accent);
     position: absolute;
-    top: 40px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+    transition: background-color var(--animation);
+
+    @media screen and (max-width: 767.98px) {
+      bottom: -10px;
+    }
+
+    .how-we-do__item:hover & {
+      background-color: var(--primary-color);
+    }
   }
 
   .how-we-do__item:hover & {
@@ -121,7 +132,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1679.98px) {
-    margin-bottom: 48px;    
+    margin-bottom: 48px;
   }
 
   @media screen and (min-width: 1680px) {
