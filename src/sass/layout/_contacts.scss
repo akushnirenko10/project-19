@@ -36,7 +36,7 @@
 }
 
 .request__input{
-    min-height: 48px;
+    height: 48px;
     width: 100%;
     padding-left: 48px;
     font-weight: 600;
@@ -67,11 +67,10 @@
     text-transform: uppercase;
     padding: 14px 10px;
     width: 100%;
-    border: 2px solid transparent;
+    border: 2px solid var(--accent);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
-        border: 2px solid var(--accent);
         color: var(--accent);
         background-color: var(--primary-color);
     }
