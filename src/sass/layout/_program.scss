@@ -73,7 +73,9 @@
     .section {
         padding-top: 40px;
     }
-
+    .semester-program__item:not(:first-child){
+        margin-top: 4px;
+    }
     .semester-program__inner {
         margin-top: 4px;
 
