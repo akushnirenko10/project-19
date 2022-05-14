@@ -85,6 +85,7 @@
 
 @media screen and (min-width: 1680px) {
   .hero__section--discription--header {
+    width: 675px;
     font-style: normal;
     font-weight: 800;
     font-size: 58px;
@@ -102,11 +103,15 @@
   }
 
   .beackraund-hero {
-    top: -207px;
+    top: -210px;
     left: 0;
     position: absolute;
     z-index: -1;
     background-color: #f1f1f1;
+  }
+
+  .hero__foto {
+    padding-left: 246px;
   }
 }
 
