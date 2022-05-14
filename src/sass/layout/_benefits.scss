@@ -29,7 +29,7 @@ margin-bottom: 30px;
     counter-reset: benefits__list;
 }
 .benefits__item::before{
-content: counter(benefits__list) ;
+content:"- " counter(benefits__list) ;
 counter-increment: benefits__list;
 color: var(--accent);
 font-family: 'Montserrat';
@@ -37,6 +37,16 @@ font-family: 'Montserrat';
     font-weight: 700;
     font-size: 14px;
     line-height: 23px;
+
+    
+}
+.benefits__item::before::before{
+    display: block;
+    width: 22px;
+    height: 1;
+    color: var(--accent);
+    content: "";
+    flex-shrink: 0;
 }
 .benefits__text{
 font-family: 'Montserrat';
