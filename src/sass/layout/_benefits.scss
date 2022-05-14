@@ -48,7 +48,7 @@ font-family: 'Montserrat';
     color: var(--third-color);
 }
 
-// FOR TABLET -----------------------------
+// FOR TABLET ----------------------------
 
 @media screen and (min-width: 768px) {
     .benefits__title {
@@ -66,7 +66,7 @@ font-family: 'Montserrat';
     .benefits__list{
         display: flex;
        flex-wrap: wrap;
- margin-top: - 44px;
+       margin-top: - 44px;
        margin-left: -32px;
    
    padding: 0;
