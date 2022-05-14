@@ -17,24 +17,137 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" rel="stylesheet"/>
   </head>
   <body>
-    <include src="./partials/header.html"></include>
-    <include src="./partials/hero.html"></include>
-    <include src="./partials/advantages.html"></include>
-    <include src="./partials/problems.html"></include>
-    <include src="./partials/how-we-do.html"></include>
-    <include src="./partials/program.html"></include>
-    <include src="./partials/benefits.html"></include>
-    <include src="./partials/about.html"></include>
-    <include src="./partials/guarantee.html"></include>
-    <include src="./partials/reviews.html"></include>
-    <include src="./partials/contacts.html"></include>
-    <include src="./partials/footer.html"></include>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <!-- <include src="./partials/example.html"></include> -->
+      <include src="./partials/header.html"></include>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/problems.html"></include>
+      <include src="./partials/how-we-do.html"></include>
+      <include src="./partials/program.html"></include>
+      <include src="./partials/benefits.html"></include>
+      <include src="./partials/about.html"></include>
+      <include src="./partials/guarantee.html"></include>
+      <include src="./partials/reviews.html"></include>
+      <include src="./partials/contacts.html"></include>
+      <include src="./partials/footer.html"></include>
+      <!--Так добавляются фрагменты в главные HTML - файлы страниц. -->
+      <!-- < include src = "./partials/example.html" ></ > -->
+  
+      <!--Скрипт идёт последним в разметке.В нём уже подключен главный SASS - файл. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script>
+          $('.slider-single').slick({
+            slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          fade: false,
+          adaptiveHeight: false,
+          infinite: true,
+          useTransform: true,
+          speed: 400,
+          cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+          responsive: [{
+            breakpoint: 768,
+          settings: {
+            arrows: false
+            }
+          }]
+        });
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+          $('.slider-nav')
+          .on('init', function (event, slick) {
+            $('.slider-nav .slick-slide.slick-current').addClass('is-active');
+          })
+          .slick({
+            rows: 1,
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          dots: false,
+          focusOnSelect: false,
+          adaptiveHeight: false,
+          arrows: true,
+          infinite: false,
+          responsive: [{
+            breakpoint: 1024,
+          settings: {
+            slidesToShow: 7,
+          slidesToScroll: 1,
+              }
+            },  {
+            breakpoint: 768,
+          settings: {
+            slidesToShow: 5,
+          slidesToScroll: 1,
+              }
+            },
+          {
+            breakpoint: 480,
+          settings: {
+            slidesToShow: 4,
+          slidesToScroll: 1,
+              }
+            },{
+            breakpoint: 400,
+          settings: {
+            slidesToShow: 3,
+          slidesToScroll: 1,
+              }
+            }
+          ]
+          });
+
+          $('.slider-single').on('afterChange', function (event, slick, currentSlide) {
+            $('.slider-nav').slick('slickGoTo', currentSlide);
+          var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+          $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+          $(currrentNavSlideElem).addClass('is-active');
+        });
+
+          $('.slider-nav').on('click', '.slick-slide', function (event) {
+            event.preventDefault();
+          var goToSingleSlide = $(this).data('slick-index');
+
+          $('.slider-single').slick('slickGoTo', goToSingleSlide);
+        });
+    </script>
+    <script>
+          function ReadMore() {
+          var parent = document.getElementsByClassName('card slick-active');
+          //console.log(parent);
+          var dots = parent[0].querySelector('.dots');
+          //console.log(dots);
+          var moreText = parent[0].querySelector('.more');
+          //console.log(moreText);
+          var btnText = parent[0].querySelector('.read-more-Btn');
+          //console.log(btnText);
+
+          if (dots.classList == "dots visually-hidden") {
+            dots.classList.remove("visually-hidden");
+          btnText.innerHTML = "Read more";
+          moreText.classList.add ("visually-hidden");
+      } else {
+            dots.classList.add("visually-hidden");
+          btnText.innerHTML = "Read less";
+          moreText.classList.remove ("visually-hidden");
+      }
+    }
+    </script>
+  <script>
+    $(document).click(function() { 
+      var parent = document.getElementsByClassName('card slick-slide');
+      var cards = Array.prototype.filter.call(parent, function(parent) {return !(parent.classList.contains("slick-active"));});
+      //cards.forEach(element => console.log(element));
+      cards.forEach(element => element.querySelector('.more').classList.add("visually-hidden"));   
+      cards.forEach(element => element.querySelector('.dots').classList.remove("visually-hidden"));   
+      cards.forEach(element => element.querySelector('.read-more-Btn').innerHTML = "Read more");
+        });
+  </script>
+  
     <script src="./index.js"></script>
   </body>
-</html>
+  
+  </html>
