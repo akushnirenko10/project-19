@@ -81,6 +81,15 @@
     z-index: -1;
     background-color: #f1f1f1;
   }
+
+  .hero {
+    background-image: url(/images/css/tablet/hero-bg-tablet.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: #f1f1f1;
+    background-color: tomato;
+    background-position: top -520px left;
+  }
 }
 
 @media screen and (min-width: 1680px) {
@@ -112,6 +121,18 @@
 
   .hero__foto {
     padding-left: 246px;
+  }
+
+  .hero {
+    background-image: url(/images/css/desktop/hero-bg-desktop.png);
+    background-repeat: no-repeat;
+    // background-size: 200%;
+    background-position: bottom left;
+    height: 806px;
+    // background-size: cover;
+    // background-color: #f1f1f1;
+    // background-position: top -288px left;
+    // width: 100%;
   }
 }
 
