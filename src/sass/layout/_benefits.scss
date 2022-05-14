@@ -17,7 +17,6 @@ color: #FFFFFF;
 margin-bottom: 30px;
 }
 .benefits__container{
-    display: flex;
     background-color: white;
     max-width: 440px;
     padding: 20px 24px 20px 20px;
@@ -54,6 +53,7 @@ font-family: 'Montserrat';
 @media screen and (min-width: 768px) {
     .benefits__title {
      text-align: center;
+    margin-bottom: 30px;
         }
     br{           
     display: none;
@@ -61,37 +61,28 @@ font-family: 'Montserrat';
     .benefits__container {
     
      min-width: 688px;
-    padding: 40px 112px 40px 92px;
+    padding: 40px 112px 40px 72px;
     }
     .benefits__list{
         display: flex;
        flex-wrap: wrap;
-       justify-content: center;
-       align-items: center;
-
-       margin-top: - 40px;
-    //    margin-left: -70px;
+ margin-top: - 44px;
+       margin-left: -32px;
    
    padding: 0;
     }
     .benefits__item {
     display: block;
-    margin-left: 70px;
-    margin-top: 40px;
-    // margin-bottom: 44px;
+    margin-left: 32px;
+    margin-top: 44px;
     max-width:calc(100% - 64px) / 2;
     }
-.benefits__list:nth-child(n + 2){
-    margin-bottom: 0;
-}
-.benefits__list:nth-child(odd){
-    min-width: 236px;
-}
+
 .benefits__list:nth-child(even){
-    min-width: 216px;
+    width: 216px;
 }
-p.benefits__text{
-   flex-direction: column;
+.benefits__text{
+   max-width: 236px;
 }
      
 }
@@ -114,27 +105,23 @@ p.benefits__text{
 
    
         .benefits__list {
-            margin-left: -140px;
+            margin-left: -204px;
             margin-top: -60px;
         }
 
     .benefits__text {
-            font-size: 20px;
-            line-height: 1.4;
+        min-width: 356px;
+        font-size: 20px;
+        line-height: 1.4;
+
         }        
     .benefits__item::before {
         font-size: 20px;
         line-height: 33px;
 }
-.benefits__item {
-    flex-wrap: wrap;
-    flex-basis: calc(100% - 612px) / 3;
-}
   .benefits__item {
-      display: block;
-      margin-left: 70px;
+      margin-left:204px;
       margin-top: 40px;
-      // margin-bottom: 44px;
-      max-width: calc(100% - 96px) / 3;
+    flex-basis: calc(100% - 612px) / 3;
   }
 }
