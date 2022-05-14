@@ -14,7 +14,6 @@
     }
     &__title {
         font-weight: 800;
-        text-align: center;
     }
     &__subtitle {
         font-weight: 700;
@@ -70,12 +69,23 @@
 }
 
 .semester-program{
-
     &__title {
-            font-weight: 700;
-    
-            color: var(--accent);
+        position: relative;
+        padding-left: 18px;
+        font-weight: 700;
+
+        color: var(--accent);
         }
+    &__title::before{
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 1px;
+        left: 0;
+        bottom: 50%;
+
+        background-color: var(--accent);
+    }
     &__description {
         font-weight: 500;
     
@@ -83,7 +93,10 @@
         opacity: 0.5;
     }
 }
-
+.pseudo-wrapper{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 @media screen and (max-width:1679px) {
     .program{
         &__title {
@@ -99,17 +112,21 @@
             font-weight: 700;
             font-size: 14px;
             line-height: 2;
+
+            margin-bottom: 4px;
+        }
+        &__item:not(:last-child) {
+            padding-bottom: 40px;
         }
     }
     .program__item {
-        padding-left: 26px;
 
         &:not(:last-child) {
             border-left: 1px solid #FFFFFF;
         }
 
         &:first-child::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 12px;
             height: 12px;
@@ -121,7 +138,7 @@
         }
 
         &:last-child::before {
-            content: '';
+            content: "";
             position: absolute;
             width: 1px;
             height: 10px;
@@ -145,6 +162,9 @@
             background-color: var(--accent);
         }
     }
+    .semester-program__inner {
+        margin-top: 4px;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -152,30 +172,28 @@
         padding-top: 40px;
         padding-bottom: 105px;
     }
-    .semester-program{
+    .semester-program {
         width: 155px;
 
         &__item:not(:first-child) {
-                margin-top: 4px;
-            }
-    }
-    .semester-program__inner {
-        margin-top: 4px;
-
-        &:not(:last-child) {
+            margin-top: 4px;
+        }
+        &__inner {
+            &:not(:last-child) {
                 margin-bottom: 4px;
             }
+        }
     }
 
     .program{
         &__list {
                 padding-left: 42px;
             }
-        &__item:not(:last-child) {
-            padding-bottom: 40px;
+        &__title{
+            text-align: center;
         }
-        &__subtitle {
-            margin-bottom: 4px;
+        &__item {
+            padding-left: 26px;
         }
     }
     @media (min-device-pixel-ratio: 2),
@@ -187,4 +205,22 @@
         }
     }
 
+}
+@media screen and (min-width:768px){
+    .semester-program {
+            display: flex;
+
+            &__item{
+            width: 155px;
+            }
+
+            &__item:not(:last-child){
+                margin-right: 32px;
+            }
+        }
+    .program{
+        &__item {
+            padding-left: 112px;
+        }
+    }
 }
