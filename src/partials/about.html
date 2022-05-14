@@ -1,8 +1,32 @@
 <section class="section about">
   <div class="container">
-    <h2 class="section__title">Teacher</h2>
+    <h2 class="section__title about__title">Teacher</h2>
     <div class="about__wrapper">
       <picture>
+        <source
+          srcset="
+            ./images/css/desktop/elena-morozova-desktop.webp    1x,
+            ./images/css/desktop/elena-morozova-desktop@2x.webp 2x
+          "
+          media="(min-width: 1200px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/css/tablet/elena-morozova-tablet.webp    1x,
+            ./images/css/tablet/elena-morozova-tablet@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/css/mobile/elena-morozova-mobile.webp    1x,
+            ./images/css/mobile/elena-morozova-mobile@2x.webp 2x
+          "
+          media="(max-width: 767px)"
+          type="image/webp"
+        />
         <source
           srcset="
             ./images/css/desktop/elena-morozova-desktop.jpg    1x,
@@ -28,38 +52,14 @@
           type="image/jpg"
         />
 
-        <source
-          srcset="
-            ./images/css/desktop/elena-morozova-desktop.webp    1x,
-            ./images/css/desktop/elena-morozova-desktop@2x.webp 2x
-          "
-          media="(min-width: 1200px)"
-          type="image/webp"
+        <img
+          class="about__teacher-img"
+          src="./images/css/mobile/elena-morozova-mobile.jpg"
+          alt="Фото учителя"
         />
-        <source
-          srcset="
-            ./images/css/tablet/elena-morozova-tablet.webp    1x,
-            ./images/css/tablet/elena-morozova-tablet@2x.webp 2x
-          "
-          media="(min-width: 768px)"
-          type="image/webp"
-        />
-        <source
-          srcset="
-            ./images/css/mobile/elena-morozova-mobile.webp    1x,
-            ./images/css/mobile/elena-morozova-mobile@2x.webp 2x
-          "
-          media="(max-width: 767px)"
-          type="image/webp"
-        />
-      <img
-        class="about__teacher-img"
-        src="./images/css/mobile/elena-morozova-mobile.jpg"
-        alt="Фото учителя"
-      />
       </picture>
       <div class="teacher__wrapper">
-        <h3 class="about__teacher">Elena Morozova</h3>
+        <h3 class="about__teacher">Elena Moreva</h3>
         <ul class="about__list">
           <li class="about__item">
             <p class="about__description">6 years of experience in preparing students for UPE</p>
@@ -71,8 +71,8 @@
           </li>
           <li class="about__item">
             <p class="about__description">
-              Passed excellent at the international analogue of UPE - <br> Cambridge PET (Preliminary
-              English Test)
+              Passed excellent at the international analogue of UPE - <br />
+              Cambridge PET (Preliminary English Test)
             </p>
           </li>
         </ul>
