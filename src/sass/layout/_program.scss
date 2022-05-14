@@ -1,57 +1,92 @@
 .program {
-    background-color: var(--third-color);
-}
-
-.program__title {
-    font-weight: 800;
-    text-align: center;
-}
-.program__list{
     position: relative;
+    background-color: var(--third-color);
 
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 150px;
+        height: 137px;
+        opacity: 0.5;
+        background-image: url(/images/css/mobile/lesson-desktop-mobile.jpg);
+    }
+    &__title {
+        font-weight: 800;
+        text-align: center;
+    }
+    &__subtitle {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    
+        color: var(--primary-color);
+    }
+    &__item {
+        position: relative;
+    }
 }
-.program__list::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 150px;
-    height: 137px;
-    opacity: 0.5;
-    background-image: url(/images/css/mobile/lesson-desktop-mobile.jpg);
-}
+   
+
 .program__item {
-    padding-left: 26px;
-
     &:not(:last-child) {
         border-left: 1px solid #FFFFFF;
     }
-    // &::before
+    &:first-child::before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 0;
+        left: 0;
+        display: block;
+        background-color: var(--third-color);
+        transform: translate(-50%, -50%);
+    }
+    &:last-child::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 10px;
+        top: 0;
+        left: 0;
+        display: block;
+        background-color: var(--primary-color);
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 12px;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, 50%);
+        border-radius: 50%;
+        
+        background-color: var(--accent);
+    }
 }
 
-.program__subtitle {
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.semester-program{
 
-    color: var(--primary-color);
-}
-
-.semester-program__title {
-    font-weight: 700;
-
-    color: var(--accent);
-}
-
-.semester-program__description {
-    font-weight: 500;
-
-    color: var(--secondary-color);
-    opacity: 0.5;
+    &__title {
+            font-weight: 700;
+    
+            color: var(--accent);
+        }
+    &__description {
+        font-weight: 500;
+    
+        color: var(--secondary-color);
+        opacity: 0.5;
+    }
 }
 
 @media screen and (max-width:1679px) {
-    .program__title {
+    .program{
+        &__title {
         margin-bottom: 40px;
 
         font-size: 20px;
@@ -59,22 +94,70 @@
         letter-spacing: 0.03em;
 
         color: var(--primary-color);
+        }
+        &__subtitle {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 2;
+        }
     }
+    .program__item {
+        padding-left: 26px;
 
-    .program__subtitle {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 2;
+        &:not(:last-child) {
+            border-left: 1px solid #FFFFFF;
+        }
+
+        &:first-child::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 0;
+            left: 0;
+            display: block;
+            background-color: var(--third-color);
+            transform: translate(-50%, -50%);
+        }
+
+        &:last-child::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 10px;
+            top: 0;
+            left: 0;
+            display: block;
+            background-color: var(--primary-color);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 12px;
+            height: 12px;
+            left: 0;
+            top: 0;
+            transform: translate(-50%, 50%);
+            border-radius: 50%;
+
+            background-color: var(--accent);
+        }
     }
-
 }
 
 @media screen and (max-width:767px) {
     .section {
         padding-top: 40px;
+        padding-bottom: 105px;
     }
-    .semester-program__item:not(:first-child){
-        margin-top: 4px;
+    .semester-program{
+        width: 155px;
+
+        &__item:not(:first-child) {
+                margin-top: 4px;
+            }
     }
     .semester-program__inner {
         margin-top: 4px;
@@ -84,12 +167,24 @@
             }
     }
 
-    .program__subtitle {
-        margin-bottom: 4px;
+    .program{
+        &__list {
+                padding-left: 42px;
+            }
+        &__item:not(:last-child) {
+            padding-bottom: 40px;
+        }
+        &__subtitle {
+            margin-bottom: 4px;
+        }
     }
-
-    .program__item:not(:last-child) {
-        padding-bottom: 40px;
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .program::after {
+            background-size: cover;
+            background-image: url(/images/css/mobile/lesson-desktop-mobile@2x.jpg);
+        }
     }
 
 }
