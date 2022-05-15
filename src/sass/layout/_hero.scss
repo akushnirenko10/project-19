@@ -1,4 +1,4 @@
-.hero__wrapper-subtitle {
+.hero__subtitle {
   font-style: normal;
   font-size: 14px;
   line-height: 22px;
@@ -6,7 +6,7 @@
   letter-spacing: 0.08em;
 }
 
-.hero__wrapper-subtitle.black {
+.hero__subtitle.black {
   margin-bottom: 48px;
 }
 
@@ -25,7 +25,7 @@
   color: var(--accent);
 }
 
-.hero__wrapper--button {
+.hero__button {
   padding: 16px 50px;
   background: var(--accent);
   font-style: normal;
@@ -48,6 +48,7 @@
 }
 @media screen and (min-width: 768px) {
   .hero__wrapper-title {
+    width: 332px;
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
@@ -57,7 +58,7 @@
     margin-bottom: 8px;
   }
 
-  .hero__wrapper-subtitle {
+  .hero__subtitle {
     flex-direction: column;
   }
 
@@ -65,7 +66,7 @@
     margin-bottom: 48px;
   }
 
-  .hero__wrapper--button {
+  .hero__button {
     padding: 16px;
     width: 260px;
   }
@@ -110,15 +111,15 @@
     color: var(--third-color);
   }
 
-  .hero__wrapper-subtitle {
+  .hero__subtitle {
     flex-direction: row;
   }
 
-  .hero__wrapper-subtitle.orandge {
+  .hero__subtitle.orandge {
     color: var(--third-color);
   }
 
-  .hero__wrapper--button {
+  .hero__button {
     padding: 28px;
     width: 354px;
   }
@@ -152,9 +153,6 @@
   .hero__wrapper--discription {
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 280px;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .hero__wrapper--discription--paragraph {
@@ -171,29 +169,26 @@
     color: var(--third-color);
   }
 
-  .hero__wrapper-subtitle {
+  .hero__subtitle {
     flex-direction: column;
   }
 
-  .hero__wrapper-subtitle.black {
+  .hero__subtitle.black {
     margin-bottom: 40px;
   }
 
-  .hero__wrapper--button {
+  .hero__button {
+    display: block;
     padding: 14px;
     width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__foto {
     margin: 0 auto 46px;
     width: 209px;
-    height: 192px;
   }
-
-  // .hero__wrapper {
-  //   margin-right: auto;
-  //   margin-left: auto;
-  // }
 
   .beackraund-hero {
     top: -31px;
