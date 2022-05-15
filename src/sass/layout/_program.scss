@@ -10,7 +10,7 @@
         width: 150px;
         height: 137px;
         opacity: 0.5;
-        background-image: url(/images/css/mobile/lesson-desktop-mobile.jpg);
+        background-image: url("/images/css/mobile/lesson-desktop-mobile.png");
     }
     &__title{
         font-weight: 800;
@@ -167,7 +167,7 @@
     (min-resolution: 2dppx) {
         .program::after {
             background-size: cover;
-            background-image: url(/images/css/mobile/lesson-desktop-mobile@2x.jpg);
+            background-image: url("/images/css/mobile/lesson-desktop-mobile@2x.png");
         }
     }
 
@@ -193,7 +193,7 @@
             bottom: 0;
             width: 368px;
             height: 268px;
-            background-image: url(/images/css/tablet/lesson-tablet.jpg);
+            background-image: url("/images/css/tablet/lesson-tablet.png");
         }
 
     @media (min-device-pixel-ratio: 2),
@@ -201,7 +201,7 @@
     (min-resolution: 2dppx) {
         .program::after {
             background-size: cover;
-            background-image: url(/images/css/tablet/lesson-tablet@2x.jpg);
+            background-image: url("/images/css/tablet/lesson-tablet@2x.png");
         }
     }
     }
