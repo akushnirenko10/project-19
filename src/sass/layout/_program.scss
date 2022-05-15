@@ -12,9 +12,6 @@
         opacity: 0.5;
         background-image: url(/images/css/mobile/lesson-desktop-mobile.jpg);
     }
-    &__title {
-        font-weight: 800;
-    }
     &__subtitle {
         font-weight: 700;
         letter-spacing: 0.08em;
@@ -24,6 +21,11 @@
     }
     &__item {
         position: relative;
+    }
+}
+.section{
+    &__title{
+        font-weight: 800;
     }
 }
 
@@ -57,16 +59,18 @@
     padding-bottom: 15px;
 }
 @media screen and (max-width:1679px) {
-    .program{
-        &__title {
+    .section{
+        &__title{
         margin-bottom: 40px;
-
         font-size: 20px;
         line-height: 1.3;
         letter-spacing: 0.03em;
-
+    
         color: var(--primary-color);
         }
+    }
+    .program{
+
         &__subtitle {
             font-weight: 700;
             font-size: 14px;
@@ -134,9 +138,14 @@
 }
 
 @media screen and (max-width:767px) {
-    .section {
+    .section-program {
         padding-top: 40px;
         padding-bottom: 105px;
+    }
+    .section{
+        &__title{
+            text-align: center;
+        }
     }
     .semester-program {
         width: 155px;
@@ -155,9 +164,7 @@
         &__list {
                 padding-left: 42px;
             }
-        &__title{
-            text-align: center;
-        }
+
         &__item {
             padding-left: 26px;
         }
@@ -203,25 +210,28 @@
         }
     }
     }
-    .section{
+    .section-program{
         padding-top: 60px;
         padding-bottom: 100px;
     }
 
 }
 @media screen and (min-width:1680px) {
-    .section {
+    .section-program {
             padding-top: 80px;
             
         }
-    .program{
+    .section{
         &__title{
             font-size: 46px;
             line-height: 1.3;
             letter-spacing: 0.03em;
-
+        
             color: var(--primary-color);
         }
+    }
+    .program{
+
         &__list{
             display: flex;
             border-top: 1px solid var(--primary-color);
