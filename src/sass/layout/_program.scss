@@ -56,7 +56,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
-@media screen and (max-width:1679px) {
+@media screen and (max-width:1679.98px) {
 
     .program{
         &__title {
@@ -132,7 +132,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767.98px) {
 
     .semester-program {
         width: 155px;
@@ -174,15 +174,11 @@
 }
 @media screen and (min-width:768px){
     .semester-program {
-        display: flex;
 
         &__item{
         width: 153px;
         }
 
-        &__item:not(:last-child){
-            margin-right: 32px;
-        }
     }
     .program{
     padding-top: 60px;
@@ -207,16 +203,36 @@
     }
 
 }
-@media screen and (min-width:768px) and (max-width:1679px){
+@media screen and (min-width:768px) and (max-width:1679.98px){
     .program__list{
         margin-left: 82px;
+    }
+    .semester-program{
+        display: flex;
+
+        &__item:not(:last-child) {
+            margin-right: 32px;
+        }
     }
     
 }
 @media screen and (min-width:1680px) {
  
     .program{
+    position: relative;
     padding-top: 80px;
+    padding-bottom: 435px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 1px;
+            top: 225px;
+            background-color: var(--primary-color);
+
+        }
+    
 
         &__title {
             font-size: 46px;
@@ -224,15 +240,72 @@
             letter-spacing: 0.03em;
     
             color: var(--primary-color);
+
+            margin-bottom: 88px;
+        }
+        &__subtitle{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 0.93;
+            letter-spacing: 0.08em;
         }
 
         &__list{
             display: flex;
-            border-top: 1px solid var(--primary-color);
+            padding-left: 156px;
         }
         &__item{
-            border-left: none;
+            padding-top: 48px;
+            
+            
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 12px;
+                height: 12px;
+                top: -8px;
+                left: 0;
+                border-radius: 50%;
+        
+                background-color: var(--accent);
+            }
+        }
+        &__item:not(:last-child){
+            margin-right: 40px;
+        }
+        &::after {
+            left: 0;
+            bottom: 0;
+            width: 772px;
+            height: 510px;
+            background-size: cover;
+            background-image: url(/images/css/desktop/lesson-desktop.jpg);
+        }
 
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .program::after {
+                background-image: url(/images/css/desktop/lesson-desktop@2x.jpg);
+            }
+        }
+    }
+    .semester-program{
+        &__title{
+            font-size: 20px;
+            line-height: 1.65;
+        }
+        &__item{
+            margin-top: 24px;
+            width: 240px;
+        }
+        &__inner{
+            margin-top: 8px;
+        }
+        &__description{
+            font-size: 18px;
+            line-height: 1.56;
         }
     }
 }
