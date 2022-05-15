@@ -18,4 +18,7 @@ function ReadMore() {
     moreText.classList.remove('visually-hidden');
   }
 }
-document.getElementById('ReadMore').addEventListener('click', ReadMore);
+var ReadMoreBtns = document.getElementsByClassName('read-more-Btn');
+for (var i = 0; i < ReadMoreBtns.length; i++) {
+    ReadMoreBtns[i].addEventListener('click', ReadMore);
+}
