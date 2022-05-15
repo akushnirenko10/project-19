@@ -66,7 +66,8 @@
   }
 
   .hero__wrapper--button {
-    padding: 16px 46px;
+    padding: 16px;
+    width: 260px;
   }
 
   .paragraph {
@@ -118,7 +119,8 @@
   }
 
   .hero__wrapper--button {
-    padding: 28px 93px;
+    padding: 28px;
+    width: 354px;
   }
 
   .hero__wrapper {
@@ -147,10 +149,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    width: 320px;
-  }
-
   .hero__wrapper--discription {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -176,6 +174,11 @@
 
   .hero__wrapper-subtitle.black {
     margin-bottom: 40px;
+  }
+
+  .hero__wrapper--button {
+    padding: 14px;
+    width: 280px;
   }
 
   .hero__foto {
