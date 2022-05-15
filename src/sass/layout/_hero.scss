@@ -47,7 +47,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__wrapper-title {
+  .hero__title {
     width: 332px;
     font-style: normal;
     font-weight: 800;
@@ -62,7 +62,7 @@
     flex-direction: column;
   }
 
-  .hero__wrapper--discription--paragraph {
+  .hero__discription--paragraph {
     margin-bottom: 48px;
   }
 
@@ -101,7 +101,7 @@
 }
 
 @media screen and (min-width: 1680px) {
-  .hero__wrapper-title {
+  .hero__title {
     width: 675px;
     font-style: normal;
     font-weight: 800;
@@ -150,16 +150,16 @@
 }
 
 @media screen and (max-width: 767px) {
-  .hero__wrapper--discription {
+  .hero__discription {
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
-  .hero__wrapper--discription--paragraph {
+  .hero__discription--paragraph {
     margin-bottom: 40px;
   }
 
-  .hero__wrapper-title {
+  .hero__title {
     margin-bottom: 8px;
     font-style: normal;
     font-weight: 800;
