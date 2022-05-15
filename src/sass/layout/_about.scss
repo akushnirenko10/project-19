@@ -1,0 +1,151 @@
+.about__title {
+  text-align: left;
+}
+
+.about__teacher-img {
+  width: 86.7%;
+  margin-bottom: 20px;
+}
+
+.about__teacher {
+  margin-bottom: 28px;
+}
+
+.about__teacher::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  top: 8px;
+  background-color: var(--secondary-color);
+}
+
+.about__description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  color: var(--third-color);
+}
+
+.about__description:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.about__list {
+  margin-bottom: 60px;
+}
+
+.about__item {
+  position: relative;
+  padding-left: 27px;
+}
+
+.about__item:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.about__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 17.08px;
+  background-size: cover;
+  background-image: url(/images/css/check.svg);
+}
+
+.dash::before {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: 24px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+.teacher__education {
+  font-weight: 500;
+  color: var(--secondary-color);
+
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.about__link {
+  text-decoration-line: underline;
+  color: var(--accent);
+}
+
+/* _______TABLET___________ */
+
+@media screen and (min-width: 768px) {
+  .about__wrapper {
+    display: flex;
+  }
+
+  .about__teacher-img {
+    width: 80.1%;
+    margin-right: 60px;
+  }
+
+  .teacher__wrapper {
+    width: 57%;
+  }
+}
+
+/* ______DESKTOP___________ */
+
+@media screen and (min-width: 1680px) {
+  .about__teacher {
+    margin-bottom: 48px;
+  }
+
+  .about__teacher-img {
+    width: 75.4%;
+    margin-right: 172px;
+  }
+
+  .about__wrapper {
+    width: 83%;
+  }
+
+  .about__item {
+    padding-left: 59px;
+  }
+
+  .about__item::before {
+    width: 24.4px;
+    height: 20px;
+  }
+
+  .about__item:not(:last-child) {
+    padding-bottom: 30px;
+  }
+
+  .about__list {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+  }
+
+  .teacher__wrapper {
+    width: 48.8%;
+  }
+
+  .teacher__education {
+    font-size: 18px;
+    line-height: 1.56;
+    padding-bottom: 15px;
+  }
+
+  .about__link {
+      margin-top: 20px;
+  }
+}
