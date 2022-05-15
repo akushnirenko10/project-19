@@ -1,6 +1,31 @@
 <section class="section">
-    <h2 class="reviews-header">Feedback from graduates</h2>
-    <div class="slider-container  "> 
+    <script>
+        function ReadMore() {
+
+            var parent = document.getElementsByClassName('card slick-active');
+            //console.log(parent);
+            var dots = parent[0].querySelector('.dots');
+            //console.log(dots);
+            var moreText = parent[0].querySelector('.more');
+            //console.log(moreText);
+            var btnText = parent[0].querySelector('.read-more-Btn');
+            //console.log(btnText);
+
+            if (dots.classList == 'dots visually-hidden') {
+                dots.classList.remove('visually-hidden');
+                btnText.innerHTML = 'Read more';
+                moreText.classList.add('visually-hidden');
+            } else {
+                dots.classList.add('visually-hidden');
+                btnText.innerHTML = 'Read less';
+                moreText.classList.remove('visually-hidden');
+            }
+        }
+    </script>
+
+    <div class="container">
+    <h2 class="section__title section__title--margins-for-slider-title">Feedback from graduates</h2>
+    <div class="slider-container"> 
         <!-- small-11 small-centered -->
         <div class="slider slider-single">
             <div class="card">
@@ -9,7 +34,7 @@
                         <source srcset="../src/images/reviews_imgs/card/1x3.webp 1x, ../src/images/reviews_imgs/card/1x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/1x3.jpg 1x, ../src/images/reviews_imgs/card/1x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/1x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/1x3.jpg' alt="Tonya Kucherovskaya" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -36,7 +61,7 @@
                         <source srcset="../src/images/reviews_imgs/card/2x3.webp 1x, ../src/images/reviews_imgs/card/2x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/2x3.jpg 1x, ../src/images/reviews_imgs/card/2x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/2x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/2x3.jpg' alt="Anna Blossom" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -62,7 +87,7 @@
                         <source srcset="../src/images/reviews_imgs/card/3x3.webp 1x, ../src/images/reviews_imgs/card/3x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/3x3.jpg 1x, ../src/images/reviews_imgs/card/3x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/3x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/3x3.jpg' alt="Cherry Crush" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -88,7 +113,7 @@
                         <source srcset="../src/images/reviews_imgs/card/4x3.webp 1x, ../src/images/reviews_imgs/card/4x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/4x3.jpg 1x, ../src/images/reviews_imgs/card/4x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/4x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/4x3.jpg' alt="Diana Daniels" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -114,7 +139,7 @@
                         <source srcset="../src/images/reviews_imgs/card/5x3.webp 1x, ../src/images/reviews_imgs/card/5x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/5x3.jpg 1x, ../src/images/reviews_imgs/card/5x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/5x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/5x3.jpg' alt="Raven Riley" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -140,7 +165,7 @@
                         <source srcset="../src/images/reviews_imgs/card/6x3.webp 1x, ../src/images/reviews_imgs/card/6x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/6x3.jpg 1x, ../src/images/reviews_imgs/card/6x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/6x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/6x3.jpg' alt="Shaiden Rogue" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -166,7 +191,7 @@
                         <source srcset="../src/images/reviews_imgs/card/7x3.webp 1x, ../src/images/reviews_imgs/card/7x4.webp 2x"
                             type="image/webp" />
                         <source srcset="../src/images/reviews_imgs/card/7x3.jpg 1x, ../src/images/reviews_imgs/card/7x4.jpg 2x" />
-                        <img class="card__img" src='../src/images/reviews_imgs/card/7x3.jpg' alt="имя" />
+                        <img class="card__img" src='../src/images/reviews_imgs/card/7x3.jpg' alt="Danika Mori" />
                     </picture>
                     <a class="card__socialnetwork" href="">
                         <img class="card__socialnetwork__logo" src="/images/css/instagram.png" />
@@ -188,7 +213,7 @@
             </div>
 
         </div>
-        <div class="slider-nav-container">
+        <!-- <div class="slider-nav-container"> -->
             <div class="slider slider-nav">
                 <div class="image-card">
                     <picture>
@@ -197,7 +222,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/1x1.jpg 1x, ../src/images/reviews_imgs/nav/1x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/1x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/1x1.jpg' alt="Tonya Kucherovskaya" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -207,7 +232,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/2x1.jpg 1x, ../src/images/reviews_imgs/nav/2x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/2x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/2x1.jpg' alt="Anna Blossom" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -217,7 +242,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/3x1.jpg 1x, ../src/images/reviews_imgs/nav/3x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/3x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/3x1.jpg' alt="Cherry Crush" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -227,7 +252,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/4x1.jpg 1x, ../src/images/reviews_imgs/nav/4x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/4x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/4x1.jpg' alt="Diana Daniels" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -237,7 +262,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/5x1.jpg 1x, ../src/images/reviews_imgs/nav/5x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/5x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/5x1.jpg' alt="Raven Riley" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -247,7 +272,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/6x1.jpg 1x, ../src/images/reviews_imgs/nav/6x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/6x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/6x1.jpg' alt="Shaiden Rogue" />
                     </picture>
                 </div>
                 <div class="image-card">
@@ -257,7 +282,7 @@
                             type="image/webp" />
                         <source
                             srcset="../src/images/reviews_imgs/nav/7x1.jpg 1x, ../src/images/reviews_imgs/nav/7x2.jpg 2x" />
-                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/7x1.jpg' alt="имя" />
+                        <img class="image-card__img" src='../src/images/reviews_imgs/nav/7x1.jpg' alt="Danika Mori" />
                     </picture>
                 </div>
                 <!-- <div class="image-card">
@@ -291,6 +316,7 @@
                     </picture>
                 </div> -->
             </div>
-        </div>
+        <!-- </div> -->
     </div>
+</div>
 </section>
