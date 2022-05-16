@@ -37,6 +37,7 @@
   color: var(--primary-color);
   border: 1px solid var(--accent);
   transition: background var(--animation), color var(--animation);
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -73,7 +74,7 @@
 
   .hero__wrapper {
     display: flex;
-    margin-top: 80px;
+    margin-top: 60px;
     padding-bottom: 88px;
     position: relative;
   }
