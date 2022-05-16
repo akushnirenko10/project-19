@@ -1,17 +1,8 @@
 .program {
-    position: relative;
+    // position: relative;
     background-color: var(--third-color);
 
-    &::after{
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 150px;
-        height: 137px;
-        opacity: 0.5;
-        background-image: url("/images/css/mobile/lesson-mobile.png");
-    }
+   
     &__title{
         font-weight: 800;
     }
@@ -26,6 +17,19 @@
         position: relative;
     }
 }
+.bg-foto-container{
+    position: relative;
+}
+.bg-foto-container::after {
+     content: "";
+     position: absolute;
+     right: 0px;
+     bottom: 0;
+     width: 150px;
+     height: 137px;
+     opacity: 0.5;
+     background-image: url("/images/css/mobile/program-mobile.jpg");
+ }
 
 .semester-program{
     &__title {
@@ -146,10 +150,11 @@
             }
         }
     }
-
+    .bg-foto-container{
+        padding-bottom: 105px;
+    }
     .program{
         padding-top: 40px;
-        padding-bottom: 105px;
 
         &__title {
             text-align: center;
@@ -165,9 +170,9 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .program::after {
+        .bg-foto-container::after {
             background-size: cover;
-            background-image: url("/images/css/mobile/lesson-mobile@2x.png");
+            background-image: url("/images/css/mobile/program-mobile@2x.jpg");
         }
     }
 
@@ -180,26 +185,27 @@
         }
 
     }
-    .program{
-    padding-top: 60px;
-    padding-bottom: 100px;
-
-        &::after {
-            right: 0;
-            bottom: 0;
-            width: 368px;
-            height: 268px;
-            background-image: url("/images/css/tablet/lesson-tablet.png");
-        }
+    .bg-foto-container::after {
+        right: 0;
+        bottom: 0;
+        width: 368px;
+        height: 268px;
+        background-image: url("/images/css/tablet/program-tablet.jpg");
+    }
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .program::after {
+        .bg-foto-container::after {
             background-size: cover;
-            background-image: url("/images/css/tablet/lesson-tablet@2x.png");
+            background-image: url("/images/css/tablet/program-tablet@2x.jpg");
         }
     }
+    .program{
+    padding-top: 60px;
+    }
+    .bg-foto-container{
+        padding-bottom: 100px;
     }
 
 }
@@ -217,11 +223,12 @@
     
 }
 @media screen and (min-width:1680px) {
- 
+    .bg-foto-container{
+    padding-bottom: 400px;
+    }
     .program{
     position: relative;
     padding-top: 80px;
-    padding-bottom: 435px;
 
         &::before{
             content: "";
@@ -274,23 +281,8 @@
         &__item:not(:last-child){
             margin-right: 40px;
         }
-        &::after {
-            left: 0;
-            bottom: 0;
-            width: 772px;
-            height: 510px;
-            background-size: cover;
-            background-image: url(/images/css/desktop/lesson-desktop.png);
-        }
-
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            .program::after {
-                background-image: url(/images/css/desktop/lesson-desktop@2x.png);
-            }
-        }
     }
+
     .semester-program{
         &__title{
             font-size: 20px;
@@ -306,6 +298,22 @@
         &__description{
             font-size: 18px;
             line-height: 1.56;
+        }
+    }
+    .bg-foto-container::after {
+        left: 0;
+        bottom: 0;
+        width: 693px;
+        height: 510px;
+        background-size: cover;
+        background-image: url("/images/css/desktop/program-desktop.jpg");
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .bg-foto-container::after {
+            background-image: url("/images/css/desktop/program-desktop@2x.jpg");
         }
     }
 }
