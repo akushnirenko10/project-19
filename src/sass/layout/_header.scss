@@ -1,0 +1,175 @@
+.menu-button {
+    display: inline-flex;
+    padding: 0;
+    margin: auto 0;
+    border: none;
+    background-color: transparent;
+
+    //align-self: flex-end;
+    //z-index: 1000;
+    // @media screen and (min-width: 480px){
+       
+    // right: calc(30px + (100% - 480px) * 0.5);
+
+
+    // }
+
+    @media screen and (min-width: 1680px){
+        display: none;
+    }
+    &__open {
+        stroke: var(--third-color);
+        transition: color var(--animation);
+        &:hover,&:focus {
+            color: var(--accent);
+            stroke: currentColor;
+        }
+
+    }
+    // &__icon-menu {
+
+    //     stroke: var(--third-color);
+        
+    
+    // }
+    &__close {
+        stroke-width: 2px;
+        stroke: var(--primary-color);
+        transition: color var(--animation);
+        &:hover,&:focus {
+            color: var(--accent);
+            stroke: currentColor;
+        }
+    }
+}
+.navigation {
+    margin-left: auto;
+    margin-right: 40px;
+    //align-self: flex-end;
+
+    &__list {
+        display: none;
+        gap: 40px;
+        align-items: center;
+        height: 70px;
+
+        &__element {
+            font-size: 14px;
+            line-height: 1.219;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            transition: color var(--animation);
+
+            &:hover,
+            &:focus {
+                color: var(--accent);
+            }
+
+        }
+
+
+        @media screen and (min-width: 1680px) {
+            display: flex;
+
+        }
+    }
+}
+
+.header-button {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: block;
+        margin-right: 40px;
+        margin-left: auto;
+    }
+    @media screen and (min-width: 1680px) {
+        display: block;
+        margin: 0;
+    }
+}
+
+.pop-up-menu {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+        margin: 0 auto;
+        @media screen and (min-width: 480px) {
+            width:440px;
+        }
+        @media screen and (min-width: 768px) {
+            width:704px;
+            gap: 80px;
+        }
+
+        
+    }
+    position: fixed;
+	
+	//justify-content: space-between;
+	
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+	z-index: 999;
+
+    overflow: auto;
+    background-color: rgba(17, 21, 24, 0.9);
+
+   
+
+	opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+	padding: 20px;
+    @media screen and (min-width: 768px) {
+        padding: 40px 32px;
+    }
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    &__header {
+        display: flex;
+        
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        margin: 0 auto;
+        width:280px;
+        &__element {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+
+        @media screen and (min-width: 768px) {
+            font-size: 26px;
+        }
+        
+        color: var(--primary-color);
+
+        transition: color var(--animation);
+        &:hover,&:focus {
+            color: var(--accent);
+        }
+        }
+    }
+    &__button {
+        margin: 0 auto;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        
+    }
+
+}

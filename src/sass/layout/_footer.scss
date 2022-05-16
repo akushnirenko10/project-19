@@ -1,0 +1,102 @@
+.footer__container{
+    padding-top:40px;
+    padding-bottom:40px;
+
+    @media screen and (min-width: 768px) and (max-width:1680px){
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    @media screen and (min-width:1680px){
+        display: flex;
+        padding-top: 80px;
+        padding-bottom: 78px;
+    }
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 1680px) {
+        margin-left:452px;
+    }
+}
+
+.contacts__phone{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.08em;
+    color: var(--third-color);
+    margin-bottom: 23px;
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus{
+        color: var(--accent);
+    }
+    
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 0;
+        border-right: 1px solid var(--secondary-color);
+        height: 40px;
+        padding-right: 24px;
+}
+    @media screen and (min-width: 1680px) {
+        font-size: 30px;
+        line-height: 1.23;
+        padding-right: 16px;
+    }
+}
+
+.contacts__phone-icon{
+    width: 20px;
+    height: 19px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 768px){
+        width: 24px;
+        height: 23px;
+        margin-right: 24px;
+    }
+}
+
+.contacts__social {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        top: -20px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/css/instagram.svg);
+    }
+}
+
+.footer__box-inner{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: var(--third-color);
+} 
+
+.footer__copyright{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    color: var(--secondary-color);
+}
