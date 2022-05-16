@@ -1,17 +1,18 @@
 .program {
-    position: relative;
     background-color: var(--third-color);
-
-    &::after{
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 150px;
-        height: 137px;
-        opacity: 0.5;
-        background-image: url("/images/css/mobile/lesson-mobile.png");
+    &__container {
+        position: relative;
     }
+   &__container::after {
+       content: "";
+       position: absolute;
+       right: 0px;
+       bottom: 0;
+       width: 150px;
+       height: 137px;
+       opacity: 0.5;
+       background-image: url("/images/css/mobile/program-mobile.jpg");
+   }
     &__title{
         font-weight: 800;
     }
@@ -26,6 +27,7 @@
         position: relative;
     }
 }
+
 
 .semester-program{
     &__title {
@@ -146,11 +148,12 @@
             }
         }
     }
-
+    
     .program{
         padding-top: 40px;
+        &__container {
         padding-bottom: 105px;
-
+        }
         &__title {
             text-align: center;
         }
@@ -161,13 +164,14 @@
         &__item {
             padding-left: 26px;
         }
-    }
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .program::after {
-            background-size: cover;
-            background-image: url("/images/css/mobile/lesson-mobile@2x.png");
+    
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            &__container::after {
+                background-size: cover;
+                background-image: url("/images/css/mobile/program-mobile@2x.jpg");
+            }
         }
     }
 
@@ -180,27 +184,30 @@
         }
 
     }
+    
     .program{
     padding-top: 60px;
-    padding-bottom: 100px;
-
-        &::after {
+        &__container {
+            padding-bottom: 100px;
+        }
+        &__container::after {
             right: 0;
             bottom: 0;
             width: 368px;
             height: 268px;
-            background-image: url("/images/css/tablet/lesson-tablet.png");
+            background-image: url("/images/css/tablet/program-tablet.jpg");
         }
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .program::after {
-            background-size: cover;
-            background-image: url("/images/css/tablet/lesson-tablet@2x.png");
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            &__container::after {
+                background-size: cover;
+                background-image: url("/images/css/tablet/program-tablet@2x.jpg");
+            }
         }
     }
-    }
+
 
 }
 @media screen and (min-width:768px) and (max-width:1679.98px){
@@ -217,11 +224,10 @@
     
 }
 @media screen and (min-width:1680px) {
- 
+
     .program{
     position: relative;
     padding-top: 80px;
-    padding-bottom: 435px;
 
         &::before{
             content: "";
@@ -232,7 +238,25 @@
             background-color: var(--primary-color);
 
         }
-    
+        &__container {
+            padding-bottom: 400px;
+        }
+        &__container::after {
+            left: 0;
+            bottom: 0;
+            width: 693px;
+            height: 510px;
+            background-size: cover;
+            background-image: url("/images/css/desktop/program-desktop.jpg");
+        }
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            &__container::after {
+                background-image: url("/images/css/desktop/program-desktop@2x.jpg");
+            }
+        }
 
         &__title {
             font-size: 46px;
@@ -274,23 +298,8 @@
         &__item:not(:last-child){
             margin-right: 40px;
         }
-        &::after {
-            left: 0;
-            bottom: 0;
-            width: 772px;
-            height: 510px;
-            background-size: cover;
-            background-image: url(/images/css/desktop/lesson-desktop.png);
-        }
-
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            .program::after {
-                background-image: url(/images/css/desktop/lesson-desktop@2x.png);
-            }
-        }
     }
+
     .semester-program{
         &__title{
             font-size: 20px;
@@ -307,5 +316,5 @@
             font-size: 18px;
             line-height: 1.56;
         }
-    }
+    } 
 }

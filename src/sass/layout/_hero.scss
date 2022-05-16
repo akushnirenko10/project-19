@@ -1,28 +1,31 @@
-.paragraph {
+.hero__subtitle {
   font-style: normal;
   font-size: 14px;
   line-height: 22px;
   display: flex;
-  align-items: center;
   letter-spacing: 0.08em;
-
-  &--color-silver {
-    font-weight: 500;
-    color: var(--secondary-color);
-  }
-
-  &--color-black {
-    font-weight: 700;
-    color: var(--third-color);
-  }
-
-  &--color-orandge {
-    font-weight: 700;
-    color: var(--accent);
-  }
 }
 
-.hero__section--button {
+.hero__subtitle.black {
+  margin-bottom: 48px;
+}
+
+.silver {
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.black {
+  font-weight: 700;
+  color: var(--third-color);
+}
+
+.orandge {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero__button {
   padding: 16px 50px;
   background: var(--accent);
   font-style: normal;
@@ -32,19 +35,19 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--primary-color);
-  border: 1px solid #ff6b09;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--accent);
+  transition: background var(--animation), color var(--animation);
 
   &:hover,
   &:focus {
     background: var(--primary-color);
     color: var(--accent);
-    border: 1px solid #ff6b09;
+    border: 1px solid var(--accent);
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__section--discription--header {
+  .hero__title {
+    width: 332px;
     font-style: normal;
     font-weight: 800;
     font-size: 26px;
@@ -54,12 +57,13 @@
     margin-bottom: 8px;
   }
 
-  .hero__section--discription--paragraph {
-    margin-bottom: 48px;
+  .hero__subtitle {
+    flex-direction: column;
   }
 
-  .hero__section--button {
-    padding: 16px 46px;
+  .hero__button {
+    padding: 16px;
+    width: 260px;
   }
 
   .paragraph {
@@ -67,7 +71,7 @@
     line-height: 33px;
   }
 
-  .hero__section--beackraund {
+  .hero__wrapper {
     display: flex;
     margin-top: 80px;
     padding-bottom: 88px;
@@ -79,12 +83,19 @@
     left: 0;
     position: absolute;
     z-index: -1;
-    background-color: #f1f1f1;
+    background-color: var(--secondary-bg-color);
+  }
+
+  .hero {
+    background-image: url(/images/css/tablet/hero-bg-tablet.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom left;
   }
 }
 
 @media screen and (min-width: 1680px) {
-  .hero__section--discription--header {
+  .hero__title {
     width: 675px;
     font-style: normal;
     font-weight: 800;
@@ -94,11 +105,20 @@
     color: var(--third-color);
   }
 
-  .hero__section--button {
-    padding: 28px 93px;
+  .hero__subtitle {
+    flex-direction: row;
   }
 
-  .hero__section--beackraund {
+  .hero__subtitle.orandge {
+    color: var(--third-color);
+  }
+
+  .hero__button {
+    padding: 28px;
+    width: 354px;
+  }
+
+  .hero__wrapper {
     position: relative;
   }
 
@@ -107,29 +127,29 @@
     left: 0;
     position: absolute;
     z-index: -1;
-    background-color: #f1f1f1;
+    background-color: var(--secondary-bg-color);
   }
 
   .hero__foto {
     padding-left: 246px;
   }
+
+  .hero {
+    background-image: url(/images/css/desktop/hero-bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    background-color: var(--secondary-bg-color);
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .container {
-    width: 320px;
-  }
-
-  .hero__section--discription {
+  .hero__discription {
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
-  .hero__section--discription--paragraph {
-    margin-bottom: 40px;
-  }
-
-  .hero__section--discription--header {
+  .hero__title {
     margin-bottom: 8px;
     font-style: normal;
     font-weight: 800;
@@ -139,13 +159,25 @@
     color: var(--third-color);
   }
 
-  .hero__foto {
-    margin: 40px auto 46px;
+  .hero__subtitle {
+    flex-direction: column;
   }
 
-  .hero__section--beackraund {
-    position: relative;
-    padding-bottom: 56px;
+  .hero__subtitle.black {
+    margin-bottom: 40px;
+  }
+
+  .hero__button {
+    display: block;
+    padding: 14px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__foto {
+    margin: 0 auto 46px;
+    width: 209px;
   }
 
   .beackraund-hero {
@@ -153,6 +185,14 @@
     left: 0;
     position: absolute;
     z-index: -1;
-    background-color: #f1f1f1;
+    background-color: var(--secondary-bg-color);
+  }
+
+  .hero {
+    background-image: url(/images/css/mobile/hero-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 102%;
+    background-position: bottom;
+    background-color: var(--secondary-bg-color);
   }
 }
