@@ -5,6 +5,8 @@
     border: none;
     background-color: transparent;
 
+    cursor: pointer;
+
     //align-self: flex-end;
     //z-index: 1000;
     // @media screen and (min-width: 480px){
@@ -18,25 +20,25 @@
         display: none;
     }
     &__open {
-        stroke: var(--third-color);
         transition: color var(--animation);
+        color:var(--third-color);
+        stroke: currentColor;
+        
         &:hover,&:focus {
+            transition: color var(--animation);
             color: var(--accent);
             stroke: currentColor;
         }
 
     }
-    // &__icon-menu {
-
-    //     stroke: var(--third-color);
-        
-    
-    // }
     &__close {
         stroke-width: 2px;
-        stroke: var(--primary-color);
         transition: color var(--animation);
+        color: var(--primary-color);
+        stroke: currentColor;
+        
         &:hover,&:focus {
+            transition: color var(--animation);
             color: var(--accent);
             stroke: currentColor;
         }
