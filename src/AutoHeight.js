@@ -1,7 +1,7 @@
 var slider_original_height;
 //var array_of_height;
 
-window.onload = function() {
+function autosize() {
   slider_original_height = document.getElementsByClassName('slick-track')[0].clientHeight + "px";
   // var parent = document.getElementsByClassName('card slick-slide');
   // array_of_height = Array.prototype.filter.call(parent, function (parent) {
@@ -11,10 +11,15 @@ window.onload = function() {
   var active_slide = document.getElementsByClassName('card slick-slide slick-active');
   var height = active_slide[0].clientHeight;
   single_slider[0].style.height = height + "px";
-};
+  //console.log(1);
+}
+
+//$(window).load(autosize);
+//$(window).resize(autosize);
 
 $(document).click(function() {
   //console.log(1);
+
   var single_slider = document.getElementsByClassName('slider slider-single slick-slider');
   var active_slide = document.getElementsByClassName('card slick-slide slick-active');
   single_slider[0].style.height = slider_original_height;
@@ -55,4 +60,11 @@ $(document).click(function() {
   cards.forEach(element => (element.querySelector('.read-more-Btn').innerHTML = 'Read more'));
 
 });
-
+$(window).on('load', autosize);
+$(window).on('resize', function(){
+  clearTimeout(window.resizedFinished);
+  window.resizedFinished = setTimeout(function() {
+    //console.log('Resized finished.');
+    autosize();
+  }, 250);
+});
