@@ -34,6 +34,7 @@
     font-size: 14px;
     line-height: 23px;
   }
+
   &__text {
     font-weight: 700;
     font-size: 14px;
@@ -70,6 +71,7 @@
 
       padding: 0;
     }
+
     &__item {
       display: block;
       margin-left: 32px;
@@ -89,6 +91,7 @@
     }
   }
 }
+
 // FOR DESKTOP-----------------------------
 
 @media screen and (min-width: 1680px) {
