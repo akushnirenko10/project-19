@@ -78,20 +78,12 @@
     position: relative;
   }
 
-  .beackraund-hero {
-    top: -221px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero {
     background-image: url(/images/css/tablet/hero-bg-tablet.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: bottom left;
-    background-color: var(--secondary-bg-color);
+    background-position: bottom -48px left;
+    background-color: var(--primary-color);
   }
 }
 
@@ -123,14 +115,6 @@
     position: relative;
   }
 
-  .beackraund-hero {
-    top: -210px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero__foto {
     padding-left: 246px;
   }
@@ -139,8 +123,8 @@
     background-image: url(/images/css/desktop/hero-bg-desktop.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: bottom;
-    background-color: var(--secondary-bg-color);
+    background-position: bottom -48px left;
+    background-color: var(--primary-color);
   }
 }
 
@@ -181,19 +165,11 @@
     width: 209px;
   }
 
-  .beackraund-hero {
-    top: -31px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero {
     background-image: url(/images/css/mobile/hero-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 102%;
     background-position: bottom;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--primary-color);
   }
 }
