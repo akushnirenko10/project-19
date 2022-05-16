@@ -120,12 +120,19 @@
     }
 }
 
-.contacts__social-icon{
-    width: 40px;
-    height: 40px;
+.contacts__social {
+    position: relative;
 
-    @media screen and (min-width: 768px) {
-        margin-left: 24px;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 24px;
+        top: -20px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/css/instagram.svg);
     }
 }
 
