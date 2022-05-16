@@ -78,19 +78,12 @@
     position: relative;
   }
 
-  .beackraund-hero {
-    top: -221px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero {
     background-image: url(/images/css/tablet/hero-bg-tablet.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom left;
+
   }
 }
 
@@ -122,14 +115,6 @@
     position: relative;
   }
 
-  .beackraund-hero {
-    top: -210px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero__foto {
     padding-left: 246px;
   }
@@ -138,14 +123,12 @@
     background-image: url(/images/css/desktop/hero-bg-desktop.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: bottom;
-    background-color: var(--secondary-bg-color);
+    background-position: bottom -48px left;
   }
 }
 
 @media screen and (max-width: 767px) {
   .hero__discription {
-    margin-top: 40px;
     margin-bottom: 40px;
   }
 
@@ -180,19 +163,10 @@
     width: 209px;
   }
 
-  .beackraund-hero {
-    top: -31px;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    background-color: var(--secondary-bg-color);
-  }
-
   .hero {
     background-image: url(/images/css/mobile/hero-bg-mobile.png);
     background-repeat: no-repeat;
     background-size: 102%;
     background-position: bottom;
-    background-color: var(--secondary-bg-color);
   }
 }
