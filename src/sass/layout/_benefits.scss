@@ -1,0 +1,128 @@
+.benefits {
+  background-image: linear-gradient(to top, var(--primary-color) 60%, var(--third-color) 40%);
+  padding-top: 40px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: 0.03em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+
+  &__box {
+    position: relative;
+    background-color: var(--primary-color);
+    max-width: 440px;
+    padding: 20px 24px 20px 20px;
+    margin: auto;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    z-index: 3;
+  }
+  &__item {
+    margin-bottom: 40px;
+  }
+  &__list {
+    counter-reset: benefits__list;
+  }
+  &__item::before {
+    content: '— 0' counter(benefits__list);
+    counter-increment: benefits__list;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+    color: var(--third-color);
+  }
+}
+
+// FOR TABLET ----------------------------
+
+@media screen and (min-width: 768px) {
+  .benefits {
+    background-image: linear-gradient(to top, var(--primary-color) 60%, var(--third-color) 40%);
+    padding-top: 40px;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &__title br {
+      display: none;
+    }
+    &__box {
+      min-width: 688px;
+      padding: 40px 112px 40px 72px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -44px;
+      margin-left: -32px;
+
+      padding: 0;
+    }
+    &__item {
+      display: block;
+      margin-left: 32px;
+      margin-top: 44px;
+      width: calc(100% - 64px) / 2;
+      margin-bottom: 0;
+    }
+
+    &__list:nth-child(even) {
+      width: 216px;
+    }
+    &__text {
+      width: 236px;
+    }
+    &__list:nth-child(1) {
+      min-width: 236px;
+    }
+  }
+}
+// FOR DESKTOP-----------------------------
+
+@media screen and (min-width: 1680px) {
+  .benefits {
+    min-width: 1680px;
+    background-image: linear-gradient(to bottom, var(--third-color) 63%, var(--primary-color) 37%);
+    margin-top: -180px;
+
+    &__box {
+      min-width: 1648px;
+      padding: 60px 32px 60px 140px;
+    }
+    &__title {
+      visibility: hidden;
+    }
+
+    &__list {
+      margin-left: -204px;
+      margin-top: -60px;
+    }
+
+    &__text {
+      width: 356px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    &__item::before {
+      font-size: 20px;
+      line-height: 33px;
+    }
+    &__item {
+      margin-left: 204px;
+      margin-top: 40px;
+      flex-basis: calc(100% - 612px) / 3;
+    }
+  }
+}
