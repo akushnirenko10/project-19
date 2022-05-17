@@ -1,0 +1,157 @@
+.problems {
+  background-image: linear-gradient(to bottom, var(--third-color) 63%, var(--primary-color) 37%);
+  padding-top: 26px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  &__help {
+    color: var(--accent);
+  }
+
+  &__box {
+    background-color: var(--primary-color);
+    max-width: 440px;
+    padding: 32px 80px;
+    margin: auto;
+    margin-bottom: o;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    z-index: 3;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    counter-reset: benefits__list;
+  }
+
+  &__item::before {
+    content: '— 0' counter(benefits__list);
+    counter-increment: benefits__list;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.08em;
+    color: var(--third-color);
+  }
+}
+// FOR TABLET ----------------------------
+
+@media screen and (min-width: 768px) {
+  .problems {
+    background-image: linear-gradient(to bottom, var(--third-color) 75%, var(--primary-color) 25%);
+    padding-top: 38px;
+
+    &__title {
+      max-width: 425px;
+      margin-bottom: 25px;
+    }
+
+    &__box {
+      min-width: 688px;
+      padding: 40px 112px 40px 72px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -24px;
+      margin-left: -20px;
+      padding: 0;
+    }
+
+    &__item {
+      display: block;
+      margin-left: 20px;
+      margin-top: 24px;
+      width: calc(100% - 20px) / 2;
+      margin-bottom: 0;
+    }
+
+    &__text {
+      width: 224px;
+    }
+
+    &__list:nth-child(1) {
+      min-width: 236px;
+    }
+  }
+}
+
+// FOR DESKTOP-----------------------------
+
+@media screen and (min-width: 1680px) {
+  .problems {
+    min-width: 1680px;
+    position: relative;
+    padding-top: 90px;
+
+    &__title {
+      margin-bottom: 80px;
+      max-width: 866px;
+      font-size: 46px;
+    }
+    &__thumb {
+      position: relative;
+      width: 1680px;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+    &-fire {
+      position: absolute;
+      display: inline-block;
+      background-image: url(/images/fire-bg.svg);
+      width: 455px;
+      height: 472px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: 10px;
+      top: -260px;
+    }
+
+    &__box {
+      position: relative;
+      min-width: 1648px;
+      padding: 60px 32px 60px 140px;
+    }
+
+    &__list {
+      margin-left: -85px;
+      margin-top: -60px;
+    }
+
+    &__text {
+      min-width: 356px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    &__item::before {
+      font-size: 20px;
+      line-height: 33px;
+    }
+
+    &__item {
+      margin-left: 85px;
+      margin-top: 40px;
+      flex-basis: calc((100%- (85px+223px)) / 3);
+    }
+    &__list:nth-child(3n + 3) {
+      margin-left: 204px;
+    }
+  }
+}

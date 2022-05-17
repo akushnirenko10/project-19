@@ -25,6 +25,28 @@
   color: var(--accent);
 }
 
+.hero__button {
+  padding: 16px 50px;
+  background: var(--accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  border: 1px solid var(--accent);
+  transition: background var(--animation), color var(--animation);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: var(--primary-color);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero__title {
     width: 332px;
@@ -82,7 +104,7 @@
 
   .hero__wrapper {
     display: flex;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 88px;
     position: relative;
   }
@@ -91,7 +113,8 @@
     background-image: url(/images/css/tablet/hero-bg-tablet.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: bottom -48px left;
+    background-position: bottom left;
+
   }
 }
 

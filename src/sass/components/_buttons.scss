@@ -1,0 +1,47 @@
+.button {
+    //padding: 16px 50px;
+
+    background: transparent;
+    border: 2px solid var(--accent);
+
+    width: 280px;
+    height: 48px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.219;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+
+    cursor: pointer;
+
+    &--modal {
+        min-width: 100%;
+    }
+
+    @media screen and (min-width: 768px){
+        width: 260px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 1.214;
+        letter-spacing: 0.14em;
+    }
+    @media screen and (min-width: 1680px){
+        width: 336px;
+        height: 70px;
+    }
+
+    
+    transition: background-color var(--animation),
+      color var(--animation);
+  
+    &:hover,
+    &:focus {
+      background: var(--accent);
+      color: var(--primary-color);
+     
+    }
+  }

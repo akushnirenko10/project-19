@@ -1,0 +1,110 @@
+<header class="section">
+    <div class="container container--header">
+            <a class="logo" href="/">
+                <p class="logo__primary-text">
+                    Hell<svg class="logo__icon">
+                        <use href="/images/css/icons.svg#icon-fire"></use>
+                    </svg>EN
+                </p>
+                <p class="logo__secondary-text">
+                    Hellish<span class="logo__secondary-text logo__secondary-text--accent"> English</span>
+                </p>
+            </a>
+
+        
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li> <a href="#programs" class="navigation__list__element"> Studying program </a> </li>
+                <li> <a href="#about" class="navigation__list__element"> About </a> </li>
+                <li> <a href="#problems" class="navigation__list__element"> Training options </a> </li>
+                <li> <a href="#contacts" class="navigation__list__element"> Contacts </a> </li>
+            </ul>
+        </nav>
+
+        <button class="button header-button" data-modal-open>consultation by phone</button>
+
+        <button class="menu-button menu-button__open" type="button" header_data-menu-open>
+            <svg width="22" height="15">
+                <use class="menu-button__icon-menu" href="../src/images/css/icons.svg#icon-menu"></use>
+            </svg>
+        </button>
+
+    </div>
+
+        <div class="pop-up-menu" header_data-menu>
+            <div class="pop-up-menu__container">
+                <div class="pop-up-menu__header">
+                    <div class="logo">
+                        <a href="/">
+                            <p class="logo__primary-text logo__primary-text--reverse">
+                                Hell<svg class="logo__icon">
+                                    <use href="/images/css/icons.svg#icon-fire"></use>
+                                </svg>EN
+                            </p>
+                            <p class="logo__secondary-text logo__secondary-text--reverse">
+                                Hellish<span class="logo__secondary-text logo__secondary-text--accent"> English</span>
+                            </p>
+                        </a>
+                    </div>
+        
+                    <button class="menu-button menu-button__close" type="button" header_data-menu-close>
+                        <svg width="16" height="16">
+                            <use class="menu-button__icon-menu-close" href="../src/images/css/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <nav>
+                    <ul class="pop-up-menu__navigation">
+                        <li> <a href="#programs" class="pop-up-menu__navigation__element"> Studying program </a> </li>
+                        <li> <a href="#about" class="pop-up-menu__navigation__element"> About </a> </li>
+                        <li> <a href="#problems" class="pop-up-menu__navigation__element"> Training options </a> </li>
+                        <li> <a href="#contacts" class="pop-up-menu__navigation__element"> Contacts </a> </li>
+                    </ul>
+                </nav>
+                <button class="button pop-up-menu__button" data-modal-open2 >consultation by phone</button>
+            </div>
+        </div>
+        
+    <!-- modal-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal" >
+                <button class="menu-button menu-button__ModalClose" data-modal-close>
+                    <svg width="16" height="16">
+                        <use class="menu-button__icon-menu-close" href="../src/images/css/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <form id="form">
+                <h2 class="modal-header">Give us you phone number and we will call you back</h2>
+
+                <label class="label">
+                    <p class="label__text">Name</p>
+                    <div class="input">
+                        <input class="input__field" type="text" name="name" required>  
+                        <svg class="input__icon">
+                            <use href="../src/images/css/icons.svg#person-black"></use>
+                        </svg>
+                    </div>
+                </label>
+                <label class="label">
+                    <p class="label__text">Telephone</p>
+                    <div class="input">
+                        <input class="input__field" type="tel" name="tel" required>  
+                        <svg class="input__icon">
+                            <use href="../src/images/css/icons.svg#phone-black"></use>
+                        </svg>
+                    </div>
+                </label>
+
+                <label class="label">
+                    <p class="label__text">Comment</p>
+                    <textarea class="textarea" name="comment" placeholder="Enter the text"></textarea>
+                </label>
+                
+                <button id="modal-submit" class="button button--modal" type="submit">Sent</button>
+                <p class="success visually-hidden">Thank you, we will call you soon!</p>
+                
+                </form>
+            </div>
+        </div>
+    
+</header>

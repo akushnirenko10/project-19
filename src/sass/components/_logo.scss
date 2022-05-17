@@ -1,0 +1,71 @@
+.logo {
+    &--footer {
+        display: flex;
+        margin-bottom: 21px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    //margin-bottom: 21px; 
+
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        //margin-bottom: 0;
+    }
+
+    &__primary-text {
+        display: flex;
+        align-items: center;
+        color: var(--third-color);
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 1.23;
+        margin-bottom: 3px;
+
+        &--reverse {
+            color: var(--primary-color);
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 26px;
+        }
+    }
+
+    &__secondary-text {
+        font-weight: 700;
+        font-size: 5px;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--third-color);
+
+        &--reverse {
+            color: var(--primary-color);
+        }
+
+        &--accent {
+            color: var(--accent);
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 8px;
+            line-height: 1.25;
+        }
+    }
+
+    &__icon {
+        width: 14px;
+        height: 19px;
+
+        @media screen and (min-width: 768px) {
+            width: 22px;
+            height: 30px;
+        }
+    }
+
+}

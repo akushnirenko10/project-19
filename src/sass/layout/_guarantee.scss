@@ -28,11 +28,21 @@
 
     &__item::before {
         position: absolute;
+        top: -5px;
+        left: 0;
+        transform: translateX(-50%);
+        content: '';
+        width: 14.59px;
+        height: 30px;
+        background-color: var(--secondary-bg-color);;
+    }
+
+    &__item::after {
+        position: absolute;
         top: 0;
         left: 0;
         transform: translateX(-50%);
         content: '';
-        display: block;
         width: 14.59px;
         height: 20px;
         background-image: url(/images/css/fire.svg);
@@ -51,6 +61,7 @@
         }
 
         &__inner {
+            margin-left: 0;
             background-color: var(--secondary-bg-color);
             padding-left: 87px;
             padding-right: 58px;
@@ -62,8 +73,11 @@
         }
 
         &__item {
-            padding-bottom: 20px;
             padding-left: 24px;
+        }
+
+        &__item:not(:last-child) {
+            padding-bottom: 20px;
         }
 
         &__item::before {
