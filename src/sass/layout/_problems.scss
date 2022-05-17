@@ -148,7 +148,7 @@
     &__item {
       margin-left: 85px;
       margin-top: 40px;
-      flex-basis: calc((100%- (85px+223px)) / 3);
+      flex-basis: calc((100% - (85px + 223px)) / 3);
     }
     &__list:nth-child(3n + 3) {
       margin-left: 204px;
