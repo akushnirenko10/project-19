@@ -1,18 +1,17 @@
 .logo {
     &--footer {
         display: flex;
-        flex-direction: column;
         margin-bottom: 21px;
-        
+        flex-direction: column;
         @media screen and (min-width: 768px) {
-            justify-content: flex-start;
+            // justify-content: flex-start;
             margin-bottom: 0;
         }
     }
     display: inline-flex;
     justify-content: center;
     align-self: center;
-    margin-bottom: 21px; 
+    // margin-bottom: 21px; 
 
     @media screen and (min-width: 768px) {
         justify-content: flex-start;
