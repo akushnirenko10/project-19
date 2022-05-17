@@ -10,28 +10,27 @@
     color: var(--primary-color);
     margin-bottom: 30px;
   }
-  &__help {
-    color: var(--accent);
-  }
 
   &__box {
     background-color: var(--primary-color);
     max-width: 440px;
     padding: 32px 80px;
     margin: auto;
-    margin-bottom: o;
+    margin-bottom: 0;
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     z-index: 3;
   }
 
   &__item {
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   &__list {
     counter-reset: benefits__list;
   }
-
+  &__item:last-child {
+    margin-bottom: 0px;
+  }
   &__item::before {
     content: '— 0' counter(benefits__list);
     counter-increment: benefits__list;
@@ -57,7 +56,6 @@
     padding-top: 38px;
 
     &__title {
-      max-width: 425px;
       margin-bottom: 25px;
     }
 
@@ -86,7 +84,7 @@
       width: 224px;
     }
 
-    &__list:nth-child(1) {
+    &__item:nth-child(1) {
       min-width: 236px;
     }
   }
@@ -98,12 +96,12 @@
   .problems {
     min-width: 1680px;
     position: relative;
-    padding-top: 90px;
+    padding-top: 80px;
 
     &__title {
       margin-bottom: 80px;
-      max-width: 866px;
       font-size: 46px;
+      margin-right: 0;
     }
     &__thumb {
       position: relative;
@@ -148,9 +146,9 @@
     &__item {
       margin-left: 85px;
       margin-top: 40px;
-      flex-basis: calc((100%- (85px+223px)) / 3);
+      flex-basis: calc((100% - (85px + 223px)) / 3);
     }
-    &__list:nth-child(3n + 3) {
+    &__item:nth-child(3n + 3) {
       margin-left: 204px;
     }
   }
