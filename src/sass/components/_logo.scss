@@ -10,7 +10,8 @@
     display: inline-flex;
     justify-content: center;
     align-self: center;
-    // margin-bottom: 21px; 
+    flex-direction: column;
+    //margin-bottom: 21px; 
 
     @media screen and (min-width: 768px) {
         justify-content: flex-start;

@@ -1,7 +1,6 @@
 <header class="section">
     <div class="container container--header">
-        <div class="logo">
-            <a href="/">
+            <a class="logo" href="/">
                 <p class="logo__primary-text">
                     Hell<svg class="logo__icon">
                         <use href="/images/css/icons.svg#icon-fire"></use>
@@ -11,7 +10,6 @@
                     Hellish<span class="logo__secondary-text logo__secondary-text--accent"> English</span>
                 </p>
             </a>
-        </div>
 
         
         <nav class="navigation">
@@ -23,7 +21,7 @@
             </ul>
         </nav>
 
-        <button class="button header-button">consultation by phone</button>
+        <button class="button header-button" data-modal-open>consultation by phone</button>
 
         <button class="menu-button menu-button__open" type="button" header_data-menu-open>
             <svg width="22" height="15">
@@ -49,7 +47,7 @@
                         </a>
                     </div>
         
-                    <button class="menu-button menu-button__close" type="button" data header_data-menu-close>
+                    <button class="menu-button menu-button__close" type="button" header_data-menu-close>
                         <svg width="16" height="16">
                             <use class="menu-button__icon-menu-close" href="../src/images/css/icons.svg#close"></use>
                         </svg>
@@ -63,10 +61,50 @@
                         <li> <a href="#contacts" class="pop-up-menu__navigation__element"> Contacts </a> </li>
                     </ul>
                 </nav>
-                <button class="button pop-up-menu__button">consultation by phone</button>
+                <button class="button pop-up-menu__button" data-modal-open2 >consultation by phone</button>
             </div>
         </div>
         
+    <!-- modal-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal" >
+                <button class="menu-button menu-button__ModalClose" data-modal-close>
+                    <svg width="16" height="16">
+                        <use class="menu-button__icon-menu-close" href="../src/images/css/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <form id="form">
+                <h2 class="modal-header">Give us you phone number and we will call you back</h2>
 
+                <label class="label">
+                    <p class="label__text">Name</p>
+                    <div class="input">
+                        <input class="input__field" type="text" name="name" required>  
+                        <svg class="input__icon">
+                            <use href="../src/images/css/icons.svg#person-black"></use>
+                        </svg>
+                    </div>
+                </label>
+                <label class="label">
+                    <p class="label__text">Telephone</p>
+                    <div class="input">
+                        <input class="input__field" type="tel" name="tel" required>  
+                        <svg class="input__icon">
+                            <use href="../src/images/css/icons.svg#phone-black"></use>
+                        </svg>
+                    </div>
+                </label>
+
+                <label class="label">
+                    <p class="label__text">Comment</p>
+                    <textarea class="textarea" name="comment" placeholder="Enter the text"></textarea>
+                </label>
+                
+                <button id="modal-submit" class="button button--modal" type="submit">Sent</button>
+                <p class="success visually-hidden">Thank you, we will call you soon!</p>
+                
+                </form>
+            </div>
+        </div>
     
 </header>
