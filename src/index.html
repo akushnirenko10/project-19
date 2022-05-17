@@ -21,6 +21,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" rel="stylesheet"/>
     <!-- Подключение стилей связанных со слайдером ВСЕ-->
+    
+    
   </head>
   <body>
       <include src="./partials/header.html"></include>
@@ -54,7 +56,31 @@
     <!-- Скрипты связанные со слайдером ВСЕ-->
     <!-- Скрипт на кнопки в меню и автозакрытие меню по ссылке-->
       <script src="./MenuBtn.js"></script>
+    <!-- Открытие модального меню по кнопке в header-->
+      <script src="./Modal.js"></script>
+    <!-- Спиннер-->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js'></script>
+      <scropt src="./Spin.js"></scropt>
+      
+      
+    <script>
+        document.getElementById("modal-submit").addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("form").reset();
+          var delayInMilliseconds = 1000;
 
+          setTimeout(function () {
+            
+            document.querySelector(".success").classList.remove("visually-hidden");
+            setTimeout(function () {
+              document.querySelector("[data-modal]").classList.toggle("is-hidden");
+              document.querySelector(".success").classList.add("visually-hidden");
+            }, delayInMilliseconds);
+          }, delayInMilliseconds);
+
+
+        });
+    </script>
     <script src="./index.js"></script>
 
   </body>
