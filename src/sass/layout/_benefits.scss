@@ -104,14 +104,21 @@
       min-width: 1648px;
       padding: 60px 32px 60px 140px;
     }
-
+    &__title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      clip: rect(0 0 0 0);
+    }
     &__list {
       margin-left: -140px;
       margin-top: -60px;
     }
-    &__title {
-      visibility: hidden;
-    }
+
     &__text {
       width: 356px;
       font-size: 20px;
