@@ -58,14 +58,17 @@
       <script src="./MenuBtn.js"></script>
     <!-- Открытие модального меню по кнопке в header-->
       <script src="./Modal.js"></script>
-    <!-- Спиннер
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js'></script>
-      <scropt src="./Spin.js"></scropt> -->
+    
       
       
     <script>
         document.getElementById("modal-submit").addEventListener("click", function (event) {
+          if (document.getElementsByClassName("input__field")[0].value=="" || document.getElementsByClassName('input__field')[1].value=="") {
+
+          }
+          else {
           event.preventDefault();
+
           document.getElementById("form").reset();
           var delayInMilliseconds = 1000;
 
@@ -78,7 +81,7 @@
             }, delayInMilliseconds);
           }, delayInMilliseconds);
 
-
+        }
         });
     </script>
     <script src="./index.js"></script>
