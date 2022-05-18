@@ -1,6 +1,6 @@
 .benefits {
   background-image: linear-gradient(to top, var(--primary-color) 60%, var(--third-color) 40%);
-
+  padding-top: 40px;
   &__title {
     font-weight: 800;
     font-size: 20px;
@@ -17,7 +17,6 @@
     padding: 20px 24px 20px 20px;
     margin: auto;
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-    z-index: 3;
   }
   &__item {
     margin-bottom: 40px;
@@ -33,7 +32,9 @@
     font-size: 14px;
     line-height: 23px;
   }
-
+  &__item:last-child {
+    margin-bottom: 0px;
+  }
   &__text {
     font-weight: 700;
     font-size: 14px;
@@ -42,7 +43,6 @@
     color: var(--third-color);
   }
 }
-
 // FOR TABLET ----------------------------
 
 @media screen and (min-width: 768px) {
@@ -95,23 +95,23 @@
 
 @media screen and (min-width: 1680px) {
   .benefits {
+    position: relative;
     min-width: 1680px;
-    background-image: linear-gradient(to bottom, var(--third-color) 63%, var(--primary-color) 37%);
-    margin-top: -180px;
-
+    background-image: linear-gradient(to top, var(--primary-color) 110%, var(--third-color) 30%);
     &__box {
+      position: absolute;
+      bottom: 20px;
       min-width: 1648px;
       padding: 60px 32px 60px 140px;
+    }
+
+    &__list {
+      margin-left: -140px;
+      margin-top: -60px;
     }
     &__title {
       visibility: hidden;
     }
-
-    &__list {
-      margin-left: -204px;
-      margin-top: -60px;
-    }
-
     &__text {
       width: 356px;
       font-size: 20px;
@@ -121,8 +121,11 @@
       font-size: 20px;
       line-height: 33px;
     }
+    &__item:last-child {
+      margin-bottom: 0px;
+    }
     &__item {
-      margin-left: 204px;
+      margin-left: 180px;
       margin-top: 40px;
       flex-basis: calc(100% - 612px) / 3;
     }

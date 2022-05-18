@@ -126,11 +126,10 @@
             background-color: var(--accent);
         }
     }
-    .semester-program {
-
-        &__inner {
-                margin-top: 4px;
-            }
+    .semester-program{
+        &__list{
+            margin-top: 4px;
+        }
     }
 }
 
@@ -139,13 +138,8 @@
     .semester-program {
         width: 155px;
 
-        &__item:not(:first-child) {
-            margin-top: 4px;
-        }
-        &__inner {
-            &:not(:last-child) {
-                margin-bottom: 4px;
-            }
+        &__item:not(:last-child){
+            margin-bottom: 4px;
         }
     }
     
@@ -239,7 +233,7 @@
 
         }
         &__container {
-            padding-bottom: 400px;
+            padding-bottom: 375px;
         }
         &__container::after {
             left: 0;
@@ -301,15 +295,19 @@
     }
 
     .semester-program{
+    margin-top: 24px;
+
         &__title{
             font-size: 20px;
             line-height: 1.65;
         }
         &__item{
-            margin-top: 24px;
             width: 240px;
         }
-        &__inner{
+        &__item:not(:last-child){
+            margin-bottom: 24px;
+        }
+        &__list{
             margin-top: 8px;
         }
         &__description{
