@@ -1,14 +1,16 @@
 .footer__container{
+    display: flex;
+    flex-direction: column;
     padding-top:40px;
     padding-bottom:40px;
 
     @media screen and (min-width: 768px) and (max-width:1680px){
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
     
     @media screen and (min-width:1680px){
-        display: flex;
+        flex-direction: row;
         padding-top: 80px;
         padding-bottom: 78px;
     }
@@ -17,7 +19,10 @@
 .contacts{
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    @media screen and (max-width: 767.98px){
+        align-items: center;
+    }
       
     @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -77,8 +82,12 @@
 }
 
 .contacts__social-icon {
+    display: flex;
+    align-items: center;
     width: 40px;
     height: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(223deg, #3d159f, #e10d63, #f7cc0b);
 
     @media screen and (min-width: 768px) {
         margin-left: 24px;
