@@ -1,8 +1,8 @@
 (() => {
     const refs = {
-      header_openMenuBtn: document.querySelector('[header_data-menu-open]'),
-      header_closeMenuBtn: document.querySelector('[header_data-menu-close]'),
-      header_menu: document.querySelector('[header_data-menu]'),
+      header_openMenuBtn: document.querySelector('[data-menu-open-header]'),
+      header_closeMenuBtn: document.querySelector('[data-menu-close-header]'),
+      header_menu: document.querySelector('[data-menu-header]'),
      };
   
     refs.header_openMenuBtn.addEventListener('click', toggleMenu);
