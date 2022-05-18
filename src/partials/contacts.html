@@ -1,17 +1,37 @@
 <section class="section request">
   <div class="container">
-      <b class="request__label" id="contacts"
+    <h2 class="section__title visually-hidden">Contact form</h2>
+    <b class="request__label" id="contacts"
       >Registration for a <span class="accent">free</span> phone
       <span class="accent">consultation</span> on the nuances of English UPE</b
     >
     <p class="request__text">
       Leave a request for participation in a
-      <span class="accent">free lesson</span>.</br>
-    A consultant will contact you and answer your questions</p>
+      <span class="accent">free lesson</span>.<br />
+      A consultant will contact you and answer your questions
+    </p>
     <form class="request__form">
-      <input class="request__input" type="text" name="person-phone" placeholder="Name*" required minlength="3" pattern="^[a-zA-Z]+$" title="Input name in english, use only letters." />
-      <input class="request__input" type="phone" name="person-phone" placeholder="Phone*" required  minlength="12" maxlength="12"  pattern="[0-9]{12}"
-        title="Enter the number in the format 380ххххххххх">
+      <input
+        class="request__input"
+        type="text"
+        name="person-phone"
+        placeholder="Name*"
+        required
+        minlength="3"
+        pattern="^[a-zA-Z]+$"
+        title="Input name in english, use only letters."
+      />
+      <input
+        class="request__input"
+        type="tel"
+        name="person-phone"
+        placeholder="Phone*"
+        required
+        minlength="12"
+        maxlength="12"
+        pattern="[0-9]{12}"
+        title="Enter the number in the format 380ххххххххх"
+      />
       <button class="request__button" type="submit">I want a free lesson</button>
     </form>
   </div>
