@@ -216,10 +216,14 @@
 
     transition: background-color var(--animation);
 
-    &:hover,&:focus {
-        
+    &:hover,&:focus{
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    &:not(.slick-disabled):hover,&:not(.slick-disabled):focus {
+        
+        
         background-color: rgba(#FF6B09, 0.2);
     }
     
